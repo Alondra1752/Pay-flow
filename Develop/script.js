@@ -1,6 +1,7 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
+
 // Collect employee data
 const collectEmployees = function() {
   let employees = [];
@@ -62,14 +63,32 @@ displayAverageSalary(employees);
 const getRandomEmployee = function(employeesArray) {
 
   // TODO: Select and display a random employee
-  const randomIndex = Math.florr(Math.random()* employeesArray.length);
+  const randomIndex = Math.floor(Math.random()* employeesArray.length);
 
   // access the employee object at the random index 
   const randomEmplyee = employeesArray[randomIndex];
 
-  //
-}
+  // selected employee's information
+  console.log(`Random Employee: ${randomEmployee.firstName} ${randonEmployee.lastName}, Salary: ${randomEmployee.salary}`);
+};
 
+// Array of employee objects 
+const employees = [
+  { firstName: "John", lastName: "Doe", salary: 50000 },
+  { firstName: "Jane", lastName: "Smith", salary: 60000 },
+  { firstName: "Alice", lastName: "Johnson", salary: 55000 }
+];
+
+// Function with array of employees
+getRandomEmployee(employees);
+
+// Event Listener for the button
+addEmployeesBtn.addEventListener('click', function() {
+  const employeeData = collectEmployees();
+  console.log('Employee Data:', employeeData);
+  displayAverageSalary(employeeData);
+  getRandomEmployee(employeeData);
+});
 
 
 
