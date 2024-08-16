@@ -11,7 +11,7 @@ const collectEmployees = function() {
   while (addEmployee) {
     const firstName = prompt("Enter employee's first name:");
     const lastName = prompt("Enter employee's last name:");
-    const salary = prompt("Enter employee's salary:");
+    let salary = prompt("Enter employee's salary:");
     
     if (isNaN(salary)) {
       alert("Invalid salary input, will be calculated as default value of $0 (zero).");
@@ -58,19 +58,8 @@ const getRandomEmployee = function(employeesArray) {
   const randomIndex = Math.floor(Math.random()* employeesArray.length);
 
   // selected employee's information
-  console.log(`Random Employee: ${randomEmployee.firstName} ${randonEmployee.lastName}, Salary: ${randomEmployee.salary}`);
+console.log(`Congratulations to ${employeesArray[random.Index].firstName} ${employeesArrat[randomIndex].lastName}, our random winner!`);
 };
-
-// Array of employee objects 
-const employees = [
-  { firstName: "John", lastName: "Doe", salary: 50000 },
-  { firstName: "Jane", lastName: "Smith", salary: 60000 },
-  { firstName: "Alice", lastName: "Johnson", salary: 55000 }
-];
-
-// Function with array of employees
-getRandomEmployee(employees);
-
 
 /*
   ====================
